@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Weatherify{% endblock %}
+{% block content %}
+
+<!-- Response Data -->
+<div id="profile" class="media">
+  
+
+  <div class="media-body">
+    <h1>Weatherify</h1>
+    <div class="parent">
+      <div class="p">  LOCATION: {{ Location }}</div>
+      <div class="p"> TEMPERATURE: {{Temperature}}°C</div>
+      <div class="p"> WEATHER: {{Description}}</div>
+    </div>
+
+  </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+  .media-body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+    
+  }
+  h1 { 
+    font-family: 'Inter', sans-serif;
+font-size: 50px;
+font-weight: 900;
+
+text-align: center;
+
+ }
+  .p { 
+font-family: 'Inter', sans-serif;
+font-size: 15px;
+font-weight: 300;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+text-transform: uppercase;
+margin-left: 20px;
+ }
+
+ .parent {
+   display: flex;
+   align-items: center;
+  justify-content: center;
+
+ }
+</style>
+  
+{% endblock %}
+
